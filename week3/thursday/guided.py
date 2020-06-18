@@ -11,17 +11,37 @@ def find_smallest_missing(arr):
 # '''
 
     ### SOLUTION # 1
-    if len(arr) == 0:
-        return
-    if arr[0] != 0:
-        return 0
-    for i in range(len(arr) - 1):
-        if arr[i+1] != arr[i]+1:
-            return arr[i] + 1
-    return arr[-1] + 1
+    # if len(arr) == 0:
+    #     return
+    # if arr[0] != 0:
+    #     return 0
+    # for i in range(len(arr) - 1):
+    #     if arr[i+1] != arr[i]+1:
+    #         return arr[i] + 1
+    # return arr[-1] + 1
 
     ### SECOND SOLUTION
-    # pass
+    low = 0
+    high = len(arr) -1
+    # if len(arr) == 0:
+    #     return 0
+    if len(arr) == 0 or arr[0] != 0 :
+        return 0
+    if arr[high] == high:
+        return high + 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] == mid:
+            if arr[mid + 1] != arr[mid] + 1:
+                return arr[mid] + 1
+            low = mid + 1
+        else:
+            high = mid
+    return high
+    
+
 
 # INPUT ARRAYS
 a = [0, 1, 2, 6, 9, 11, 15] # smallest missing is 3
