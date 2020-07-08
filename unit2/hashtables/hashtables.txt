@@ -1,0 +1,36 @@
+The Problem
+------------
+
+Find an item in a set/list of items.
+
+[ "Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", adipiscing", "elit" ]
+    0         1        2       3      4          5             6          7
+
+
+is "Beej" in thie list?
+- Runtime Complexity of searching alist:
+    O(n)
+
+Need: a magic box that tells us which index a certain element is at:
+
+"elit" => [O(1)magicbox] => 7
+"elit" => [hashing function] => 7
+
+
+Hashing function
+----------------
+
+Input: string
+Output: number
+
+* for any given input, you get the same Output
+* multiple inputs can give the output ('collisions')
+
+* Work on bytes (byte: a number between 0-255, inclusive
+
+Hash tables in particular languages
+------------------------------------
+Python: dictionary
+Javascript: object, Map
+Swift: Dictionary, HashTable, HashMap
+

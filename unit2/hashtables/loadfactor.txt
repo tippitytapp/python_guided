@@ -1,0 +1,42 @@
+Load Factor
+-------------------------------
+
+The number of records in the hash table vs the number of slots in the array
+
+data = [None] * 16
+
+put("1", 99)
+put("2", 99)
+put("3", 99)
+put("4", 99)
+put("5", 99)
+put("6", 99)
+put("7", 99)
+put("8", 99)
+put("9", 99)
+put("10", 99)
+put("11", 99)
+put("12", 99)
+
+load factor = 10 / 16 = .625 # OK
+load factor = 11 / 16 = .6875 # OK
+load factor = 12 / 16 = .75 # need to resize
+
+resize to 32
+
+load factor = 12 / 32 = .375 # OK
+
+if the load is 1.0, we have exactly the same number of data elements as array elements
+
+
+Resizing a hash table
+----------------------------------------------
+
+If the load > 0.7 : resize
+
+Resize
+-----------------------------------
+* Make a new array with _double_ the capacity of the old array
+* Have the has table refer to the new array
+* Run through all the nodes in the old has table array
+    * Put them in a new hash table array
