@@ -1,0 +1,19 @@
+git clone <url you copied from github>  -> clones repo to your computer
+
+cd <file-name> -> move into the directory you just cloned
+
+git checkout -b <first-last> -> creates branch with your name
+
+
+....
+....
+....
+....
+
+git add . -> adds all files to be tracked by git
+
+git status -> files staged to be committed
+
+git commit -m "added the gitcommands.txt file"
+
+git push -u origin marc-tapp
