@@ -1,0 +1,42 @@
+
+## Conceptualize
+-----------------
+
+What are graphs used for in everyday life?
+    - Maps
+    - Social Networks
+    - Railways
+    - Video Games
+    - Designing and Planning
+
+Graphs use nodes or vertexes and edges to connect each nodes
+
+Cyclic Graph -- you can continue traversing over and over and over
+To be cyclic, if theres anyway to start at a node and traverse back to it in anyway, the whole graph is cyclic
+Acyclic Graph -- you cannot
+
+Bonus: Dijjkstra's Algorithm, A* ("A star")
+
+
+Graph Representations
+----------------------
+
+* Adjacency Matrix
+            TO
+         A   B   C
+F    A   F   T   T
+R
+O    B   T   F   T
+M
+     C   F   F   F
+
+
+* Adjacency List (We'll use this)
+
+edges = {
+    'A': [B, C],
+    'B': [B, A, C],  # order doesn't matter
+    'C': []
+}
+
+A neighbor is a node that is immediately connected to another node
