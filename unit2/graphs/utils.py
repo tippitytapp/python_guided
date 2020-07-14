@@ -24,3 +24,19 @@ class Queue():
             return None
     def size(self):
         return len(self.queue)
+
+class Graph:
+    def __init__(self):
+        self.vertices = {}
+
+    def add_vertex(self, vertex_id):
+        self.vertices[vertex_id] = set()    # This will hold edges
+
+    def add_edge(self, fromV, toV):
+        if fromV in self.vertices and toV in self.vertices:
+            self.vertices[fromV].add(toV)
+        else:
+            raise IndexError("nonexistent vert")
+    
+    def get_neighbors(self, vertex_id):
+        return self.vertices[vertex_id]

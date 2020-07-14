@@ -67,19 +67,20 @@ class Graph:
         q = Queue()
         # Create a Set to store visited vertices
         visited = set()
-        q.enqueue(start)
+        q.enqueue([start])
         # WHile the queue is not empty
         while q.size() > 0:
-            # Dequeue the first PATH
-
-            # Grab the last vertex has not been visited
-                # CHECK IF ITS THE TARGET
-                    # IF SO, RETURN PATH
-                # Mark it as visited...
-                # Then add A PATH TO its neighbors to the back of the queue
-                    # COPY THE PATH
-                    # APPEND THE NEIGHBOR TO THE BACK
-        pass
+            path = q.dequeue()
+            vertex = path[-1]
+            if vertex not in visited:
+                if vertex == target:
+                    return path
+                visited.add(vertex)
+                for next_v in self.get_neighbors(vertex):
+                    new_path = list(path)
+                    new_path.append(next_v)
+                    q.enqueue(new_path)
+        return f'sorry bout it'
 
 
 graphy = Graph()
