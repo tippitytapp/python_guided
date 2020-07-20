@@ -1,0 +1,60 @@
+Transitors - the most basic can be used to make logic gates
+
+Gates - Made of Transitors
+
+Digital Logic common operations performed by gates:
+    - AND, OR, NOT, XOR, NOR, NAND
+
+RAM - Random Access Mmory
+
+Fast compare to hard drives and ssds
+
+think of it like  big array of bytes that you cn access by an index, just like an array in your favorite programming language
+
+each element in ram can store one byte, an 8-bit number
+
+Larger, multi-byte values are stored in sequential addresses in RAM
+
+The CPU communicates with RAM
+
+Binary                                      To   Decimal   To   Hex
+-----------------------------------------   ---  --------  ---  ----- 
+128 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1
+        1     0     0    0    0    1    1    =>    67
+              1     0    0    0    0    1    =>    33     
+  8 ->  4 ->  2 ->  1    8 -> 4 -> 2 -> 1                
+  1     0     1     0    0    0    1    1    =>             =>   A3
+  1     1     0     0    0    1    1    1    =>             =>   C7
+
+Number Bases
+---------------
+Base 2  => Binary            => 0 1
+Base 8  => Octal             => 0 1 2 3 4 5 6 7 
+Base 10 => Decimal           => 0 1 2 3 4 5 6 7 8 9
+Base 16 => Hexidecimal, Hex  => 0 1 2 3 4 5 6 7 8 9 A B C D E F
+Base 64 => Base 64           => a - z A - Z 0 - 9 + /
+
+Counting
+--------
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+Binary => 128   64   32   16    8    4    2    1
+------------------------------------------------
+   2   =>   0    0    0    0    0    0    1    0
+   3   =>   0    0    0    0    0    0    1    1    
+   4   =>   0    0    0    0    0    1    0    0
+   5   =>   0    0    0    0    0    1    0    1
+   6   =>   0    0    0    0    0    1    1    0
+   255 =>   1    1    1    1    1    1    1    1
