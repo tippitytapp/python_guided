@@ -17,16 +17,22 @@ Memory (RAM)
 '''
 # 0b00000000 == 0
 # 0b11111111 == 255
+import sys
 
-memory = [
-    1, # PRINT_MARC,
-    3, # SAVE_REG R2,99
-    2, # R2
-    99, # 99
-    4, # PRINT_REG R2
-    2, # R2
-    2, # HALT
-]
+memory = [0] * 256
+address = 0
+with open(sys.argv[1]) as f:
+    for line in f:
+        try:
+            line = line.strip()
+            line = line.split("#", 1)[0]
+            line = int(line, 10) # make sure to specify the base
+            memory[address] = line
+            address += 1
+        except ValueError:
+            pass
+# sys.exit(0)
+
 register = [0] * 8
 pc = 0 # program counter, index into memory of the current instruction
         # AKA a pointer to the current intruction
@@ -49,3 +55,4 @@ while running:
         pc += 2
     else:
         print(f"Unknown instruction {inst}")
+        running = False

@@ -1,0 +1,67 @@
+Bitwise Operations
+------------------
+
+Truth Table
+
+Boolean:
+
+A   B       A and B
+-------------------
+F   F           F
+F   T           F
+T   F           F
+T   T           T
+
+if a > 10 and a < 20:
+    do something
+
+Bitwise:
+
+A   B       A and B (&)
+-------------------
+0   0           0
+0   1           0
+1   0           0
+1   1           1
+
+         vvvv
+    0b11101010
+&   0b00011110  AND mask
+--------------
+    0b00001010
+         ^^^^
+
+if an instruction has 2 arguments, the total length is 3 bytes
+if an instruction has 1 argument, the total length is 2 bytes
+if an instruction has 0 arguments, the total length is 1 byte.
+
+Extract bits: 
+    1) Mask
+      vv
+    0b10000010
+&   0b11000000
+--------------
+    0b10000000
+      ^^
+
+    2) Shift
+    0b10000000
+>>6 0b00000010
+
+number of operands = (instruction value & 0b11000000) >> 6
+instruction length = number of operands + 1
+
+
+A   B       A or B (|)
+-------------------
+0   0           0
+0   1           1
+1   0           1
+1   1           1
+
+A   B       A xor B (^)
+-------------------
+0   0           0
+0   1           1
+1   0           1
+1   1           0
