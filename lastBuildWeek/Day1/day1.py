@@ -28,34 +28,33 @@ class ListNode:
         self.next = None
 
 def add_two_numberss(l1, l2):
-    list1 = list()
-    list2 = list()
+    # list1 = list()
+    # list2 = list()
 
-    if l1.val is not None:
-        list1.append(str(l1.val))
-        while l1.next is not None:
-            list1.append(str(l1.next.val))
-            l1 = l1.next
-    if l2.val is not None:
-        list2.append(str(l2.val))
-        while l2.next is not None:
-            list2.append(str(l2.next.val))
-            l2 = l2.next
-    reversedone = list(reversed(list1))
-    reversedtwo = list(reversed(list2))
-    # print(reversedone)
-    # string1 = "".join(reversedone)
-    # string2 = "".join(reversedtwo)
-    num1 = int("".join(reversedone))
-    num2 = int("".join(reversedtwo))
-    total = num1 + num2
-    totalstr = str(total)
-    totallist = [num for num in totalstr]
-    newlist = []
-    for i in reversed(totallist):
-        newlist.append(ListNode(int(i))
-        
-    return newlist
+    # if l1.val is not None:
+    #     list1.append(str(l1.val))
+    #     while l1.next is not None:
+    #         list1.append(str(l1.next.val))
+    #         l1 = l1.next
+    # if l2.val is not None:
+    #     list2.append(str(l2.val))
+    #     while l2.next is not None:
+    #         list2.append(str(l2.next.val))
+    #         l2 = l2.next
+    # reversedone = list(reversed(list1))
+    # reversedtwo = list(reversed(list2))
+    # # print(reversedone)
+    # # string1 = "".join(reversedone)
+    # # string2 = "".join(reversedtwo)
+    # num1 = int("".join(reversedone))
+    # num2 = int("".join(reversedtwo))
+    # total = num1 + num2
+    # totalstr = str(total)
+    # totallist = [num for num in totalstr]
+    # newlist = []
+    # for i in reversed(totallist):
+    #     newlist.append(ListNode(int(i))
+    pass
 ######################################################################################
 
 def detectCycle(self, head)
